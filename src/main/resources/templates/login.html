@@ -11,9 +11,7 @@
 	<form action="#" th:action="@{/Postlogin}" th:object="${User}" method="post">
 	<div>
 		id<input th:text type="text" th:field="*{userId}">
-		<span>
-		<p class="form-control-static text-danger" th:if="${#fields.hasErrors('userId')}" th:errors="*{userId}">userid</p>
-		</span>
+		<span class="form-control-static text-danger" th:if="${#fields.hasErrors('userId')}" th:errors="*{userId}">userid</span>
 	</div>
 	<div>
 		pin<input th:text type="text" th:field="*{userPin}">
