@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+
+<title>login</title>
+</head>
+<body>
+	<h1>Login</h1>
+	
+	<form action="#" th:action="@{/Postlogin}" th:object="${User}" method="post">
+	<div>
+		id<input th:text type="text" th:field="*{userId}">
+		<span>
+		<p class="form-control-static text-danger" th:if="${#fields.hasErrors('userId')}" th:errors="*{userId}">userid</p>
+		</span>
+	</div>
+	<div>
+		pin<input th:text type="text" th:field="*{userPin}">
+		<span class="form-control-static text-danger" th:if="${#fields.hasErrors('userPin')}" th:errors="*{userPin}">userid</span>
+	</div>
+		<button type="submit" >submit</button>
+	</form>
+	
+</body>
+</html>
