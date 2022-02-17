@@ -27,12 +27,22 @@ public class VaController {
 		return "login";
 	}
 	
+//	@PostMapping("/Postlogin")
+//	public String logincheck(@Valid @ModelAttribute("User") User user, BindingResult bindingResult,Model model) {
+//		System.out.println("haserrs "+bindingResult.hasErrors());
+//		if(bindingResult.hasErrors()) {
+//			return "login";
+//		}
+//		
+//		System.out.println("--------------- id:" + user.getUserId());
+//		return "welcome";
+//	}
 	@PostMapping("/Postlogin")
-	public String logincheck(@Valid @ModelAttribute("User") User user, BindingResult bindingResult,Model model) {
-		System.out.println("haserrs "+bindingResult.hasErrors());
-		if(bindingResult.hasErrors()) {
-			return "login";
-		}
+	public String logincheck(@Valid @ModelAttribute("User") User user, Model model) {
+//		System.out.println("haserrs "+bindingResult.hasErrors());
+//		if(bindingResult.hasErrors()) {
+//			return "login";
+//		}
 		
 		System.out.println("--------------- id:" + user.getUserId());
 		return "welcome";

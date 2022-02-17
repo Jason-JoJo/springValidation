@@ -1,11 +1,9 @@
 package com.example.entity;
 
-import lombok.Data;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
-@Data
 public class User {
 
 	@Size(min=2)
@@ -13,4 +11,18 @@ public class User {
 	private String userId;
 	@NotEmpty
 	private String userPin;
+	public String getUserId() {
+		return userId;
+	}
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+	public String getUserPin() {
+		return userPin;
+	}
+	public void setUserPin(String userPin) {
+		this.userPin = userPin;
+	}
+	
+	
 }
